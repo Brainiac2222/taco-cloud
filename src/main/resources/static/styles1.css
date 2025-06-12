@@ -1,0 +1,152 @@
+/* styles1.css */
+
+/* ------------------------------------- */
+/*  General Reset and Base Styles       */
+/* ------------------------------------- */
+
+body, h1, h2, h3, h4, h5, h6, p, form, fieldset, input, textarea, button, select, img, a, label, span, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box; /* Important for padding and border */
+    line-height: inherit;
+    color: inherit;
+    text-decoration: none; /* Remove default link underlines */
+    list-style: none; /* Remove default list styles */
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f9f9f9; /* Light gray background */
+    color: #333; /* Dark gray text */
+    line-height: 1.6; /* Good default line height */
+    padding: 20px;
+}
+
+/* ------------------------------------- */
+/*  Typography and Headings             */
+/* ------------------------------------- */
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #e44d26; /* Taco Cloud orange */
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #e44d26; /* Taco Cloud orange for section headings */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #e44d26; /* Underline for section headings */
+    padding-bottom: 5px;
+    display: inline-block; /* Make underline width fit content */
+}
+
+/* ------------------------------------- */
+/*  Image Styling                     */
+/* ------------------------------------- */
+
+img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 250px; /* Adjust logo size as needed */
+    height: auto;
+}
+
+/* ------------------------------------- */
+/*  Form Styling                      */
+/* ------------------------------------- */
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    max-width: 600px; /* Limit form width for readability */
+    margin: 20px auto; /* Center form on page */
+}
+
+label {
+    display: block; /* Labels on their own line */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555; /* Slightly lighter label text */
+}
+
+input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%; /* Full width input fields */
+    font-size: 1em;
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #e44d26; /* Orange border on focus */
+    box-shadow: 0 0 5px rgba(228, 77, 38, 0.4); /* Subtle focus shadow */
+}
+
+input[type="submit"] {
+    padding: 14px 28px;
+    background-color: #e44d26; /* Taco Cloud orange submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2); /* Button shadow */
+    display: block; /* Make button full width if desired */
+    width: 100%;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #d43c15; /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+}
+
+input[type="submit"]:active {
+    transform: translateY(0); /* Reset lift when active */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2); /* Reset shadow when active */
+}
+
+/* ------------------------------------- */
+/*  Links and other elements            */
+/* ------------------------------------- */
+
+a#another {
+    display: block; /* Link on its own line */
+    margin-top: 15px;
+    color: #007bff; /* Standard blue link color */
+    transition: color 0.3s ease;
+    text-align: center; /* Center the link */
+}
+
+a#another:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.validationError {
+    display: block;
+    padding: 15px;
+    background-color: #ffe0b2; /* Light orange for error background */
+    color: #d32f2f; /* Darker red for error text */
+    border: 1px solid #ffb74d; /* Medium orange border */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}

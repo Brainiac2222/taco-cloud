@@ -1,0 +1,215 @@
+/* styles.css */
+
+/* ------------------------------------- */
+/*  General Reset and Base Styles       */
+/* ------------------------------------- */
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, fieldset, input, textarea, button, select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* ------------------------------------- */
+/*  Typography and Headings             */
+/* ------------------------------------- */
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #e44d26;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #e44d26;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ------------------------------------- */
+/*  Image Styling                     */
+/* ------------------------------------- */
+
+img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 200px;
+    height: auto;
+}
+
+/* ------------------------------------- */
+/*  Form Container and Layout           */
+/* ------------------------------------- */
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex; /* **CHANGED to Flexbox Layout** */
+    flex-direction: row; /* **Arrange items in a row (horizontally)** */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if they don't fit */
+    gap: 20px; /* Keep gap for spacing between ingredient groups */
+    margin-bottom: 30px;
+    justify-content: space-between; /* Distribute space evenly between groups (optional) */
+}
+
+/* ------------------------------------- */
+/*  Ingredient Group Styling            */
+/* ------------------------------------- */
+
+.ingredient-group {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    width: calc(25% - 20px); /*  Approximate equal width for 4 groups, adjust as needed */
+    min-width: 200px; /* Minimum width for each group */
+    box-sizing: border-box; /* Ensure padding and border are inside width */
+}
+
+.ingredient-group:hover {
+    border-color: #ccc;
+}
+
+.ingredient-group h3 {
+    margin-bottom: 15px;
+}
+
+.ingredient-group div {
+    margin-bottom: 10px;
+}
+
+.ingredient-group input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.ingredient-group input[type="checkbox"]:checked {
+    background-color: #e44d26;
+    border-color: #e44d26;
+}
+
+.ingredient-group input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(228, 77, 38, 0.3);
+}
+
+.ingredient-group input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
+}
+
+.ingredient-group span {
+    vertical-align: middle;
+}
+
+/* Specific border colors for ingredient groups */
+#wraps.ingredient-group {
+    border-color: #c0d6df;
+}
+
+#proteins.ingredient-group {
+    border-color: #d8b4a0;
+}
+
+#cheeses.ingredient-group {
+    border-color: #f4d06f;
+}
+
+#veggies.ingredient-group {
+    border-color: #b2d7a2;
+}
+
+
+/* ------------------------------------- */
+/*  Taco Name and Submit Area            */
+/* ------------------------------------- */
+
+form > div:last-child {
+    margin-top: 30px;
+    text-align: center;
+}
+
+form > div:last-child h3 {
+    margin-bottom: 15px;
+}
+
+form > div:last-child input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+}
+
+form > div:last-child input[type="text"]:focus {
+    outline: none;
+    border-color: #e44d26;
+    box-shadow: 0 0 0 2px rgba(228, 77, 38, 0.3);
+}
+
+form > div:last-child button {
+    padding: 12px 25px;
+    background-color: #e44d26;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+form > div:last-child button:hover {
+    background-color: #d43c15;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+form > div:last-child button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
